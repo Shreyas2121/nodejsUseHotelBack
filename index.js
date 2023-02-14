@@ -16,12 +16,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(
-  cors({
-    origin: process.env.URL,
-    credentials: true,
-  })
-);
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 connectDb();
